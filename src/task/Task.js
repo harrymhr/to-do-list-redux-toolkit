@@ -64,8 +64,8 @@ const Task = () => {
     const submitData = (e) => {
         if (add) {
             dispatch(addTask(add))
-            setAdd('')
         }
+        setAdd('')
     }
     
     const removeMyTask = (val) => {
@@ -76,7 +76,7 @@ const Task = () => {
     return (
         <Main>
             <div>
-                <input type="text" onChange={e => setAdd(e.target.value)}/>
+                <input type="text" value={add} onChange={e => setAdd(e.target.value)}/>
             </div>
             <div>
             <button className="submitBtn" onClick={submitData}>Add</button>
